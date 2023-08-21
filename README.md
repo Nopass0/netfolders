@@ -119,6 +119,10 @@ Replace your_token_here, your_secret_key_here, and the URL as needed.
 
 Contributions to NetFolders are welcome! If you find any bugs, want to add new features, or improve existing ones, please open an issue or submit a pull request.
 
+[![Forkers repo roster for @Nopass0/netfolders](https://reporoster.com/forks/Nopass0/netfolders)](https://github.com/Nopass0/netfolders/network/members)
+
+[![Stargazers repo roster for @Nopass0/netfolders](https://reporoster.com/stars/Nopass0/netfolders)](https://github.com/Nopass0/netfolders/stargazers)
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
