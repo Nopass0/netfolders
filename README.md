@@ -1,3 +1,5 @@
+![Шапка группы ВК](https://github.com/Nopass0/netfolders/assets/42220270/d09f8651-b1fb-4ae9-abef-058ac516a61a)
+
 # ![logo](https://github.com/Nopass0/netfolders/assets/42220270/82f6350a-302b-4ed5-a297-477a0853281f) NetFolders - File Server and Management System
 
 
