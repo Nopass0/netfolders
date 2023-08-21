@@ -13,8 +13,6 @@
 
 - **Logging Utility**: The built-in logging utility records essential server activities, such as file uploads, downloads, and other important events, providing a clear record of system actions.
 
-- **ASCII Art Logo**: Upon server start, NetFolders displays an ASCII art logo along with the project version, author information, and contact email for a visually appealing introduction.
-
 ## Getting Started ⭐
 
 1. Clone this repository to your local machine.
@@ -32,6 +30,90 @@
 - **Download Files**: Retrieve files using GET requests to `/get/:token`. Provide the generated token associated with the desired file.
 
 - **Authentication**: If configured, provide the authentication key in the request headers to access certain operations.
+
+## Examples :accessibility:
+
+### Uploading a File using PowerShell
+
+To upload a `.jpg` file named `example.jpg`, you can use the following PowerShell command:
+
+```powershell
+$secretKey = "your_secret_key_here"
+$filePath = "C:\path\to\your\file\example.jpg"
+$url = "http://localhost:3000/upload/example.jpg"
+
+Invoke-RestMethod -Uri $url -Method Post -Headers @{"Authorization" = $secretKey} -InFile $filePath
+```
+
+Replace your_secret_key_here, C:\path\to\your\file\example.jpg, and the URL as needed.
+
+### Downloading a File using PowerShell
+
+To download a .jpg file using its token, you can use the following PowerShell command:
+```powershell
+$token = "your_token_here"
+$secretKey = "your_secret_key_here"
+$url = "http://localhost:3000/get/$token"
+
+Invoke-WebRequest -Uri $url -Headers @{"Authorization" = $secretKey} -OutFile "downloaded_image.jpg"
+
+```
+### Uploading a File using Node.js
+
+To upload a .jpg file named example.jpg, you can use the following Node.js code:
+
+```js
+const axios = require('axios');
+const fs = require('fs');
+
+const secretKey = 'your_secret_key_here';
+const filePath = 'path/to/your/file/example.jpg';
+const url = 'http://localhost:3000/upload/example.jpg';
+
+const headers = { Authorization: secretKey };
+
+const fileStream = fs.createReadStream(filePath);
+axios.post(url, fileStream, { headers })
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+```
+
+### Downloading a File using Node.js with Secret Key
+
+To download a `.jpg` file using its token and a secret key, you can use the following Node.js code:
+
+```js
+const axios = require('axios');
+const fs = require('fs');
+
+const token = 'your_token_here';
+const secretKey = 'your_secret_key_here';
+const url = `http://localhost:3000/get/${token}`;
+
+axios({
+  method: 'get',
+  url,
+  responseType: 'stream',
+  headers: {
+    Authorization: secretKey
+  }
+})
+  .then(response => {
+    response.data.pipe(fs.createWriteStream('downloaded_image.jpg'));
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+Replace your_token_here, your_secret_key_here, and the URL as needed.
+
+**Note**: Ensure that the secretKey matches the one configured on the server-side for authentication.
 
 ## Contributing
 
