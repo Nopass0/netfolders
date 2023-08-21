@@ -1,6 +1,6 @@
 ![Шапка группы ВК](https://github.com/Nopass0/netfolders/assets/42220270/d09f8651-b1fb-4ae9-abef-058ac516a61a)
 
-# ![logo](https://github.com/Nopass0/netfolders/assets/42220270/82f6350a-302b-4ed5-a297-477a0853281f) NetFolders - File Server and Management System
+# ![logo](https://github.com/Nopass0/netfolders/assets/42220270/82f6350a-302b-4ed5-a297-477a0853281f) NetFolders - File Server and Management System [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=NetFolders%20-%20-secure,fast%20files%20server&url=[https://github.com/Nopass0/netfolders](https://github.com/Nopass0/netfolders)&via=netfolders&hashtags=developers,storage,web,javascript,typescript)
 
 
 **NetFolders** is a TypeScript-based Node.js file server and management system designed to provide a secure and efficient way to upload, store, and manage files. This project offers features like user authentication, file upload and download, logging, and more.
