@@ -1,0 +1,8 @@
+{
+    "secretKey": "dev",
+    "saveLogs": true,
+    "port": 3000,
+    "checkPeriod": 3600000,
+    "isDeleteNotUsed": true
+}
+  
